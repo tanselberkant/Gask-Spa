@@ -1,1 +1,146 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+
+a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+header {
+    padding-top: 20px;
+    width: 100%;
+    height: 100vh;
+    
+    background-image:  url("./assets/images/bg3.png");
+    background-color: black;
+    /* background: no-repeat; */
+    background-position: right;
+    background-repeat: no-repeat;
+    /* background-origin: cover; */
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+header .nav-item a {
+    text-transform: uppercase;
+}
+
+header .container {
+    position: relative;
+    height: 100%;
+    padding: 0;
+}
+
+.navbar-brand {
+    width: 100%;
+    max-width: 100px;
+    transition: opacity 10ms;
+}
+
+
+
+/*   ------------             Hero-text   ----------------               */
+
+#denemes {
+    padding-top:150px ;
+}
+
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+ /*   font-family: "Niconne", cursive; */
+    color:#fff;
+}
+
+#header-btn a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn {
+    width: 100px;
+    padding: 5px 0 !important;
+    border: 1px solid #fff;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .3), transparent);
+    transition: all 650ms;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+
+/* Main Sectiob */
+
+section {
+    max-width: 98%;
+}
+
+/* -----------------   Notification --------------     */
+
+#announcements a {
+    color: #111 !important;
+}
+
+.notifications-top {
+    width: 100%;
+    height: 60px;
+    text-align: left;
+    padding: 0 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #ff304f;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.notifications-top a {
+    position: absolute;
+    top: 3%;
+    color: #002651;
+    padding-left: 80px;
+    font-size: 24px;
+    font-weight: bold;    
+}
+
+.notification-bottom a img {
+    width:30px;
+    height: 30px;
+} 
+
+.notification-bottom ul {
+    height: 100%;
+    background-color:grey ;
+}
+
+.notification-bottom a span {
+    color: #fff;
+    font-size: 15px;
+}
+/* -----------------------------      Notification Fin       --------------------------*/
