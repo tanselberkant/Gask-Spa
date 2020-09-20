@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { About } from 'src/app/models/about';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient,
+  ) { }
+  path = "https://localhost:44308/api/home/";
+  about : About[]=[];
 
-  ngOnInit(): void {
+
+  ngOnInit(){
+    this.getAboutContent().subscribe(data => {
+      this.about = data;
+    })
   }
+
+  getAboutContent(){
+    return this.http.get<About[]>(this.path + "about")
+  }
+  
 
 }
