@@ -1,0 +1,52 @@
+ <div class="row">
+  <div class="col-12 col-md-4 mb-4">
+    <div class="text-center">
+      <i class="fas fa-map-marked-alt mb-3"></i>
+      <h2 class="mb-4">Adresimiz</h2>
+      <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.521146866022!2d32.76788096526833!3d39.95209957942186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34903ef1005ff%3A0x51fed9454c699a27!2zQW5rYXJhIEhlbHZhY8Sxc8Sx!5e0!3m2!1sen!2str!4v1568142703843!5m2!1sen!2str"
+      width="300"
+      height="400"
+      frameborder="0"
+      style="border: 0"
+      allowfullscreen=""
+    ></iframe>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 mb-4">
+    <div class="text-center">
+      <i class="fas fa-mobile-alt mb-3"></i>
+      <h2 class="mb-4">İletişim Adreslerimiz</h2>
+      <div class="kontağım" *ngFor="let item of contacts">
+        <p class="mb-3"> {{item.firstName + " "+item.lastName }}  </p>
+        <p class="mb-3"> {{item.phone}} </p>
+        <p class="mb-3"> {{item.email}} </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 mb-4">
+    <div class="text-center">
+      <i class="fas fa-envelope mb-3"></i>
+      <h2 class="mb-4">Bize Ulaşın</h2>
+    </div>
+    <form  class="contact-form">
+      <div class="form-group">
+        <label for="formGroupExampleInput">Adınız ve Soyadınız</label>
+        <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Adınız ve soyadınız">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail">Email Adresiniz</label>
+        <input type="email" name="mail" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="E-mail Adresiniz">
+      </div>
+      <div class="form-group">
+        <label for="examplePhoneNumber">Telefon</label>
+        <input type="text" class="form-control" id="examplePhoneNumber" name="phone" placeholder="Telefon numaranız">
+      </div>
+      <div class="form-group">
+        <label for="exampleTextArea">Mesajınız</label>
+        <textarea class="form-control" id="exampleTextArea" rows="3" name="message" placeholder="Mesajınız"></textarea>
+      </div>
+      <button type="submit" name="submit" class="btn mt-2">Gönder</button>
+    </form>
+  </div>
+</div>

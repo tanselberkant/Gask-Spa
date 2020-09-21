@@ -11,6 +11,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { LoginComponent } from './admin/login/login.component';
 import { TeamsComponent } from './front/teams/teams.component';
 import { AboutComponent } from './front/about/about.component';
+import { ContactComponent } from './front/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutComponent } from './front/about/about.component';
     DashboardComponent,
     LoginComponent,
     TeamsComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
