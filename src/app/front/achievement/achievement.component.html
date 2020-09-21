@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark rounded box-shadow">
+    <!-- <img class="mr-3" src="../../../assets/images/gaskmini.jpg" alt="Gask" width="48" height="48"> -->
+    <div class="1h-100">
+        <h6 class="mb-0 text-white 1h-100">Başarılarımız</h6> 
+    </div>
+  </div>
+
+  <div class="my-1 bg-white rounded box-shadow" *ngFor="let item of achievements">
+    <div class="media text-muted pt-3">
+
+      <!-- <div class="benimKupam" *ngIf=" item.trophy == 'gold' " >
+        <i class="fas fa-trophy"></i>        
+      </div> -->
+
+      <div class="benimKupam" *ngIf="item.trophy == 'Silver' " >
+        <i class="fas fa-trophy" style="color: red;"></i>      
+      </div>
+
+      <i class="fas fa-trophy"></i>      
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark"> {{item.achievementName}} </strong>          
+          {{item.achievementDate}}
+      </p>
+    </div>
+  </div>
+</div>

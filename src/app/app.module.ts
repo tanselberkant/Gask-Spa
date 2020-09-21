@@ -12,6 +12,7 @@ import { LoginComponent } from './admin/login/login.component';
 import { TeamsComponent } from './front/teams/teams.component';
 import { AboutComponent } from './front/about/about.component';
 import { ContactComponent } from './front/contact/contact.component';
+import { AchievementComponent } from './front/achievement/achievement.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactComponent } from './front/contact/contact.component';
     LoginComponent,
     TeamsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    AchievementComponent
   ],
   imports: [
     BrowserModule,
