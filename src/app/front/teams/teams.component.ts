@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Team } from 'src/app/models/team';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-teams',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private userService : UserService
+  ) { }
 
-  ngOnInit(): void {
+  teams : Team[]
+
+  ngOnInit(){
+    this.userService.getTeams().subscribe(data => {
+      this.teams = data;
+      console.log(data);
+    })
   }
 
 }

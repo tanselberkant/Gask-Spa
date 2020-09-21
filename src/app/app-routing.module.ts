@@ -7,7 +7,7 @@ import { TeamsComponent } from './front/teams/teams.component';
 
 const routes: Routes = [
   {
-    path : '',redirectTo:'/front',pathMatch :'full'
+    path : '',redirectTo:'/front/about',pathMatch :'full'
   },
   {
     path : 'front',component:NavbarComponent,children : [

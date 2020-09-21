@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { About } from 'src/app/models/about';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-about',
@@ -10,21 +11,16 @@ import { About } from 'src/app/models/about';
 export class AboutComponent implements OnInit {
 
   constructor(
-    private http : HttpClient,
+    private userService : UserService   
   ) { }
-  path = "https://localhost:44308/api/home/";
-  about : About[]=[];
+ 
+  about : About[]
 
 
   ngOnInit(){
-    this.getAboutContent().subscribe(data => {
+    this.userService.getAbout().subscribe(data => {
       this.about = data;
+      console.log(data);
     })
   }
-
-  getAboutContent(){
-    return this.http.get<About[]>(this.path + "about")
-  }
-  
-
 }

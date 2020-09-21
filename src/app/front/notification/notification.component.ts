@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Notification } from 'src/app/models/notification';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-notification',
@@ -10,21 +11,15 @@ import { Notification } from 'src/app/models/notification';
 export class NotificationComponent implements OnInit {
 
   constructor(
-    private http: HttpClient,
+    private userService:UserService
   ) { }
 
-  notifications : Notification[] = [];
-
-  path = "https://localhost:44308/api/home/";
-
+  notifications : Notification[]
+  
   ngOnInit() {
-    this.getAnnouncements().subscribe(data => {
+    this.userService.getNotifications().subscribe(data => {
       this.notifications = data;
+      console.log(data);
     })
   }
-  
-  getAnnouncements() {
-    return this.http.get<Notification[]>(this.path + "notification")
-  }
-
 }
