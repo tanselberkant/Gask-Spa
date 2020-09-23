@@ -39,5 +39,5 @@ export class UserService {
   getTeams():Observable<Team[]>{
     return this.http.get<Team[]>(this.path + "team");
   }
-
 }
+

@@ -8,26 +8,29 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './front/navbar/navbar.component';
 import { NotificationComponent } from './front/notification/notification.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import { LoginComponent } from './admin/login/login.component';
 import { TeamsComponent } from './front/teams/teams.component';
 import { AboutComponent } from './front/about/about.component';
 import { ContactComponent } from './front/contact/contact.component';
 import { AchievementComponent } from './front/achievement/achievement.component';
+import { SignInComponent } from './login/signIn/signIn.component';
+import { FormsModule,ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     NotificationComponent,
-    DashboardComponent,
-    LoginComponent,
+    DashboardComponent,    
     TeamsComponent,
     AboutComponent,
     ContactComponent,
-    AchievementComponent
+    AchievementComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     AppRoutingModule,
     HttpClientModule

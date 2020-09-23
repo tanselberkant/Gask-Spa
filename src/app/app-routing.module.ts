@@ -5,6 +5,7 @@ import { AboutComponent } from './front/about/about.component';
 import { AchievementComponent } from './front/achievement/achievement.component';
 import { NavbarComponent } from './front/navbar/navbar.component';
 import { TeamsComponent } from './front/teams/teams.component';
+import { SignInComponent } from './login/signIn/signIn.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,9 @@ const routes: Routes = [
   },
   {
     path : 'admin',component : DashboardComponent,children:[]
+  },
+  {
+    path : 'login',component : SignInComponent,children:[]
   }
 
 ];

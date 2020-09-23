@@ -1,0 +1,18 @@
+<div class="container">
+  <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Giriş Yap</h1>
+      <div *ngIf="invalidLogin" class="alert alert-danger">Yanlıs Kullanıcı Adı ya da Şifre</div>
+    </div>
+    <div class="form-label-group">
+      <input type="text" id="username" name="username" ngModel class="form-control" placeholder="Kullanıcı Adı" required autofocus>
+      <label for="inputEmail">Kullanıcı Adı</label>
+    </div>
+  
+    <div class="form-label-group">
+      <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Şifreniz" required>
+      <label for="inputPassword">Sifreniz</label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  </form>
+</div>

@@ -12,4 +12,17 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  isUserAuthenticated() {
+   
+    const token : string = localStorage.getItem("jwt");
+    if(token) {
+      return true
+    }
+    else {
+      return false
+    }
+  }
+
+
 }
