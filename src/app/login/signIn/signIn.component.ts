@@ -17,6 +17,7 @@ export class SignInComponent implements OnInit {
   ngOnInit() {
   }
 
+  path : "https://localhost:44308/api/auth/login";
   invalidLogin : boolean;
 
   login(form : NgForm) {
