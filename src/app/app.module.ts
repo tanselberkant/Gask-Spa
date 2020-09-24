@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http'
 import {CommonModule} from '@angular/common'
 import { JwtModule } from '@auth0/angular-jwt';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './front/navbar/navbar.component';

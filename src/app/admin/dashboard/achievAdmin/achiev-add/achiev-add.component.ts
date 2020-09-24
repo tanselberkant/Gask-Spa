@@ -37,4 +37,5 @@ export class AchievAddComponent implements OnInit {
       this.adminService.addAchievement(this.achievement)
     }
   }
+
 }

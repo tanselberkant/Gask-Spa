@@ -23,6 +23,10 @@ export class AdminService {
     })
   }
 
+  // deleteAchievement(achievementId) {
+  //   return this.http.delete(this.path + "achievement/delete/" +achievementId)
+  // }
+
   
 
 }

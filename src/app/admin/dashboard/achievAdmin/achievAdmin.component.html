@@ -19,7 +19,7 @@
         <td> {{item.trophy}} </td>
         <td>
           <button class="btn btn-warning btn-sm pr-1">Upd</button>
-          <button class="btn btn-danger btn-sm pl-1">Del</button>
+          <button class="btn btn-danger btn-sm pl-1" (click)="deleteAchievement(item.id)">Del</button>
         </td>
       </tr>    
     </tbody>
