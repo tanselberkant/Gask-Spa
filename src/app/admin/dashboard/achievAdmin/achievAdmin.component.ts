@@ -23,17 +23,6 @@ export class AchievAdminComponent implements OnInit {
   path = "https://localhost:44308/api/admin/";
   achievements : Achievement[]
   
-  
-  // id : number;
-  // private headers =  new Headers({'Content-Type':'application/json'})
-
-  // deleteAchievement = function(id) {
-  //   if(confirm("Are you sure?")) {
-  //     const url = `$("https://localhost:44308/api/admin/achievement/delete"/${id})`;
-      
-  //   }
-  // }
-
   ngOnInit() {
     this.userService.getAchievements().subscribe(data => {
       this.achievements = data;
@@ -45,16 +34,12 @@ export class AchievAdminComponent implements OnInit {
     if(confirm("Silmek istediğinize emin misiniz?")) {
       return this.http.delete(this.path + "achievement/delete/" +achievementId).toPromise().then(() => {
         this.userService.getAchievements().subscribe(data => {
-
           this.achievements = data;
-          this.alertifyService.success("Başarıyı sildiniz !");
+          this.alertifyService.error("Başarıyı sildiniz !");
         })
       })
     }
-  }
-
-
-  
+  }  
 }
 
 

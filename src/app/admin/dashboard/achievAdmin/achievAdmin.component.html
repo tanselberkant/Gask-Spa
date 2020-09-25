@@ -12,16 +12,17 @@
       </tr>
     </thead>
     <tbody *ngFor="let item of achievements">
-      <tr >
+      <tr>
         <th scope="row"> {{item.id}} </th>
         <td> {{item.achievementName}} </td>
         <td> {{item.achievementDate}} </td>
         <td> {{item.trophy}} </td>
         <td>
-          <button class="btn btn-warning btn-sm pr-1">Upd</button>
+          <!-- <button class="btn btn-warning btn-sm pr-1">Upd</button> -->
           <button class="btn btn-danger btn-sm pl-1" (click)="deleteAchievement(item.id)">Del</button>
         </td>
       </tr>    
     </tbody>
   </table>
 </div>
+

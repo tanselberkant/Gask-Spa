@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AchievAddComponent } from './admin/dashboard/achievAdmin/achiev-add/achiev-add.component';
 import { AchievAdminComponent } from './admin/dashboard/achievAdmin/achievAdmin.component';
+import { ContAddComponent } from './admin/dashboard/contAdmin/cont-add/cont-add.component';
+import { ContUpdateComponent } from './admin/dashboard/contAdmin/cont-update/cont-update.component';
+import { ContAdminComponent } from './admin/dashboard/contAdmin/contAdmin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AboutComponent } from './front/about/about.component';
 import { AchievementComponent } from './front/achievement/achievement.component';
@@ -24,7 +27,10 @@ const routes: Routes = [
   {
     path : 'admin',component : DashboardComponent,canActivate:[AuthGuardService],children:[
       {path : "achievs",component : AchievAdminComponent},
-      {path : "achievs/achievadd",component : AchievAddComponent}
+      {path : "achievs/achievadd",component : AchievAddComponent},
+      {path : "contacts",component : ContAdminComponent},
+      {path : "contacts/contactadd",component : ContAddComponent},
+      {path : "contacts/contactupdate/:id",component : ContUpdateComponent}
     ]
   },
   {

@@ -23,10 +23,11 @@ export class AdminService {
     })
   }
 
-  // deleteAchievement(achievementId) {
-  //   return this.http.delete(this.path + "achievement/delete/" +achievementId)
-  // }
-
-  
+  addContact(contact) {
+    this.http.post(this.path + 'contact/add',contact ).subscribe(data => {
+      this.alertifyService.success("İletişim Adresi Başarı ile eklendi");
+      this.router.navigate(['/admin/contacts']);
+    })
+  }
 
 }

@@ -19,6 +19,9 @@ import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { AchievAdminComponent } from './admin/dashboard/achievAdmin/achievAdmin.component';
 import { AlertifyService } from './services/alertify.service';
 import { AchievAddComponent } from './admin/dashboard/achievAdmin/achiev-add/achiev-add.component';
+import { ContAdminComponent } from './admin/dashboard/contAdmin/contAdmin.component';
+import { ContAddComponent } from './admin/dashboard/contAdmin/cont-add/cont-add.component';
+import { ContUpdateComponent } from './admin/dashboard/contAdmin/cont-update/cont-update.component';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -36,7 +39,10 @@ export function tokenGetter() {
     AchievementComponent,
     SignInComponent,
     AchievAdminComponent,
-    AchievAddComponent
+    AchievAddComponent,
+    ContAdminComponent,
+    ContAddComponent,
+    ContUpdateComponent
   ],
   imports: [
     BrowserModule,

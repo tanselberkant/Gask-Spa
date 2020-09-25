@@ -11,16 +11,16 @@
       </div>
       
       <div class="form-group">
-        <input type="text" id="achievementDate" name="achievementDate" formControlName="achievementDate" class="form-control" placeholder="Başarı Yılı" autofocus>
+        <input type="text" id="achievementDate" name="achievementDate" formControlName="achievementDate" class="form-control" placeholder="Başarı Yılı" >
         <span class="help-block" *ngIf="achievementAddForm.get('achievementDate').hasError('required') && achievementAddForm.get('achievementDate').touched">
-          Başarı Adı zorunludur
+          Başarı Tarihi zorunludur
         </span>
       </div>
       
       <div class="form-group">
-        <input type="text" id="trophy" name="trophy" formControlName="trophy" class="form-control" placeholder="Başarı Türü" autofocus>
+        <input type="text" id="trophy" name="trophy" formControlName="trophy" class="form-control" placeholder="Başarı Türü" >
         <span class="help-block" *ngIf="achievementAddForm.get('trophy').hasError('required') && achievementAddForm.get('trophy').touched">
-          Başarı Adı zorunludur
+          Başarı Türü zorunludur
         </span>
       </div>
 
