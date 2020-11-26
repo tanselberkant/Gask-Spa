@@ -1,0 +1,17 @@
+<div class="container">
+  
+    <form [formGroup]="notificationAddForm" (ngSubmit)="add()" class="ilkAddFormum">
+      <h2 class="mt-3 pt-3">Yeni Bir Duyuru Ekle</h2> 
+
+      <div class="form-group">
+        <input type="text" id="notificationContent" name="notificationContent" formControlName="notificationContent" class="form-control" placeholder="Duyuru içeriği" autofocus>
+        <span class="help-block" *ngIf="notificationAddForm.get('notificationContent').hasError('required') && notificationAddForm.get('notificationContent').touched ">
+          Duyuru içeriği zorunludur
+        </span>
+      </div>
+
+      <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!notificationAddForm.valid">Ekle</button>
+
+    </form>
+ 
+</div>

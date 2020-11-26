@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Duyurular</h2>
+  <a routerLink="notifsadd" class="nav-link">Yeni Bir Duyuru Eklemek için Tıklayınız</a>
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Duyuru Olusturulma Tarihi</th>
+        <th scope="col">Duyuru İçeriği</th>
+        <th scope="col">Sil</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of notifications">
+      <tr>
+        <th scope="row"> {{item.id}}</th>
+        <td> {{item.createdDate}} </td>
+        <td> {{item.notificationContent}} </td>
+        <td>
+          <button class="btn btn-danger btn-sm pl-1">Del</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

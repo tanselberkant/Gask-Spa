@@ -30,4 +30,20 @@ export class AdminService {
     })
   }
 
+  updateContact(contactId) {
+    this.http.put(this.path + 'contact/update/', contactId).subscribe(data => {
+      this.alertifyService.success("İletişim Adresi başarı ile Güncellendi");
+      this.router.navigate(['/admin/contacts']);
+    })
+  }
+
+  addNotification(notification) {
+    this.http.post(this.path + 'notification/add',notification).subscribe(data => {
+      this.alertifyService.success("Duyuru başarıyla eklendi");
+      this.router.navigate(['admin/notifs']);
+    })
+  }
+
+  
+
 }

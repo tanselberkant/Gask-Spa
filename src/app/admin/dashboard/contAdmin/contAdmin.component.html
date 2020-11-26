@@ -9,7 +9,7 @@
         <th scope="col">Soyad</th>
         <th scope="col">E-mai</th>
         <th scope="col">Telefon</th>
-        <th scope="col">Güncelle / Sil</th>
+        <th scope="col"> Sil</th>
       </tr>
     </thead>
     <tbody *ngFor="let item of contacts">
@@ -20,7 +20,7 @@
         <td> {{item.email}} </td>
         <td> {{item.phone}} </td>
         <td>
-          <button class="btn btn-warning btn-sm mr-1" [routerLink]="['contactupdate/',item.id]">Upd</button>
+          <!-- <button class="btn btn-warning btn-sm mr-1" [routerLink]="['contactupdate/',item.id]">Upd</button> -->
           <button class="btn btn-danger btn-sm ml-1"(click)="deleteContact(item.id)">Del</button>
         </td>
       </tr>

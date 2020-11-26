@@ -15,11 +15,18 @@ export class NotificationComponent implements OnInit {
   ) { }
 
   notifications : Notification[]
+  newNotifications=[]
+
+  
+
   
   ngOnInit() {
-    this.userService.getNotifications().subscribe(data => {
-      this.notifications = data;
+    this.userService.getNotifications().subscribe(data =>  {
+      this.notifications = data
+
+      
       console.log(data);
+  
     })
   }
 }

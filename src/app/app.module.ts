@@ -22,6 +22,10 @@ import { AchievAddComponent } from './admin/dashboard/achievAdmin/achiev-add/ach
 import { ContAdminComponent } from './admin/dashboard/contAdmin/contAdmin.component';
 import { ContAddComponent } from './admin/dashboard/contAdmin/cont-add/cont-add.component';
 import { ContUpdateComponent } from './admin/dashboard/contAdmin/cont-update/cont-update.component';
+import { NotifAdminComponent } from './admin/dashboard/notifAdmin/notifAdmin.component';
+import { NotifAddComponent } from './admin/dashboard/notifAdmin/notif-add/notif-add.component';
+// import { NgPipesModule } from 'ngx-pipes';
+
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -42,7 +46,10 @@ export function tokenGetter() {
     AchievAddComponent,
     ContAdminComponent,
     ContAddComponent,
-    ContUpdateComponent
+    ContUpdateComponent,
+    NotifAdminComponent,
+    NotifAddComponent,
+    // NgPipesModule
   ],
   imports: [
     BrowserModule,

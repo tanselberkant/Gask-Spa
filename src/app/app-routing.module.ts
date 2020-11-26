@@ -6,6 +6,8 @@ import { ContAddComponent } from './admin/dashboard/contAdmin/cont-add/cont-add.
 import { ContUpdateComponent } from './admin/dashboard/contAdmin/cont-update/cont-update.component';
 import { ContAdminComponent } from './admin/dashboard/contAdmin/contAdmin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { NotifAddComponent } from './admin/dashboard/notifAdmin/notif-add/notif-add.component';
+import { NotifAdminComponent } from './admin/dashboard/notifAdmin/notifAdmin.component';
 import { AboutComponent } from './front/about/about.component';
 import { AchievementComponent } from './front/achievement/achievement.component';
 import { NavbarComponent } from './front/navbar/navbar.component';
@@ -30,7 +32,9 @@ const routes: Routes = [
       {path : "achievs/achievadd",component : AchievAddComponent},
       {path : "contacts",component : ContAdminComponent},
       {path : "contacts/contactadd",component : ContAddComponent},
-      {path : "contacts/contactupdate/:id",component : ContUpdateComponent}
+      {path : "contacts/contactupdate/:id",component : ContUpdateComponent},
+      {path : "notifs",component : NotifAdminComponent},
+      {path : "notifs/notifsadd", component : NotifAddComponent}
     ]
   },
   {
