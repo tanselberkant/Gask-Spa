@@ -17,11 +17,10 @@ export class ContUpdateComponent implements OnInit {
     private router : Router
   ) { }
 
- 
 
 
   ngOnInit() {
-   
+  
   }
 
 }

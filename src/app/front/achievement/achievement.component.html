@@ -7,22 +7,34 @@
     </div>
   </div>
 
-  <div class="my-1 bg-white rounded box-shadow" *ngFor="let item of achievements">
+  <div class="my-1  rounded box-shadow" *ngFor="let item of achievements">
     <div class="media text-muted pt-3">
 
-      <!-- <div class="benimKupam" *ngIf=" item.trophy == 'gold' " >
-        <i class="fas fa-trophy"></i>        
-      </div> -->
-
-      <div class="benimKupam" *ngIf="item.trophy == 'Silver' " >
-        <i class="fas fa-trophy" style="color: red;"></i>      
+     
+      <div class="benimKupam" *ngIf="item.trophy == 'Silver' " >        
+        <p class="media-body pb-3 mb-0  lh-125 border-bottom border-gray">
+          <i class="fas fa-trophy" style="color: #C0C0C0;"></i>  {{item.achievementName}} <strong class="text-gray-dark">{{item.achievementDate}}</strong>
+        </p>
       </div>
 
-      <i class="fas fa-trophy"></i>      
-      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-        <strong class="d-block text-gray-dark"> {{item.achievementName}} </strong>          
-          {{item.achievementDate}}
-      </p>
+      <div class="benimKupam" *ngIf="item.trophy == 'Gold'">
+        <p class="media-body pb-3 mb-0  lh-125 border-bottom border-gray">
+          <i class="fas fa-trophy" style="color: #FFD700;"></i>  {{item.achievementName}} <strong class="text-gray-dark">{{item.achievementDate}}</strong>
+        </p>
+      </div>
+
+      <div class="benimKupam" *ngIf="item.trophy == 'Bronz'">
+        <p class="media-body pb-3 mb-0  lh-125 border-bottom border-gray">
+          <i class="fas fa-trophy" style="color: #cd7f32;"></i>  {{item.achievementName}} <strong class="text-gray-dark">{{item.achievementDate}}</strong>
+        </p>
+      </div>
+
+      <div class="benimKupam" *ngIf="item.trophy == 'Iron'">
+        <p class="media-body pb-3 mb-0  lh-125 border-bottom border-gray">
+          <i class="fas fa-trophy" style="color: #a19d94;"></i>  {{item.achievementName}} <strong class="text-gray-dark">{{item.achievementDate}}</strong>
+        </p>
+      </div>
+
     </div>
   </div>
 </div>

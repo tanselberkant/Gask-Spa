@@ -17,11 +17,21 @@
         </span>
       </div>
       
-      <div class="form-group">
+      <!-- <div class="form-group">
         <input type="text" id="trophy" name="trophy" formControlName="trophy" class="form-control" placeholder="Başarı Türü" >
         <span class="help-block" *ngIf="achievementAddForm.get('trophy').hasError('required') && achievementAddForm.get('trophy').touched">
           Başarı Türü zorunludur
         </span>
+      </div> -->
+
+      <div class="form-group">
+        <select name="trophy" formControlName="trophy" class="form-control" placeholder="Başarı Türü">
+          <option value="" disabled selected>Başarı Türü Giriniz</option>
+          <option value="Gold">Altın</option>
+          <option value="Silver">Gümüş</option>
+          <option value="Bronz">Bronz</option>
+          <option value="Iron">4.lük</option>
+        </select>        
       </div>
 
       <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!achievementAddForm.valid">Ekle</button>
