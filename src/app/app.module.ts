@@ -24,7 +24,6 @@ import { ContAddComponent } from './admin/dashboard/contAdmin/cont-add/cont-add.
 import { ContUpdateComponent } from './admin/dashboard/contAdmin/cont-update/cont-update.component';
 import { NotifAdminComponent } from './admin/dashboard/notifAdmin/notifAdmin.component';
 import { NotifAddComponent } from './admin/dashboard/notifAdmin/notif-add/notif-add.component';
-// import { NgPipesModule } from 'ngx-pipes';
 
 
 export function tokenGetter() {
@@ -48,8 +47,7 @@ export function tokenGetter() {
     ContAddComponent,
     ContUpdateComponent,
     NotifAdminComponent,
-    NotifAddComponent,
-    // NgPipesModule
+    NotifAddComponent
   ],
   imports: [
     BrowserModule,

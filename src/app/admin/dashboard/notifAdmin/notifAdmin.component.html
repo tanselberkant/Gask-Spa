@@ -16,7 +16,7 @@
         <td> {{item.createdDate}} </td>
         <td> {{item.notificationContent}} </td>
         <td>
-          <button class="btn btn-danger btn-sm pl-1">Del</button>
+          <button class="btn btn-danger btn-sm pl-1" (click)="deleteNotification(item.id)">Del</button>
         </td>
       </tr>
     </tbody>

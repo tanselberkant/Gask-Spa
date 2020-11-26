@@ -27,10 +27,21 @@ export class NotifAdminComponent implements OnInit {
   ngOnInit() {
     this.userService.getNotifications().subscribe(data => {
       this.notifications = data;
+      this.notifications.reverse();
       console.log(data);
     })
   }
 
-  
+  deleteNotification(notificationId : number) {
+    if(confirm("Duyuruyu Silmek İstediğinize Emin misiniz ?")) {
+      return this.http.delete(this.path + "notification/delete/" + notificationId).toPromise().then(() => {
+        this.userService.getNotifications().subscribe(data => {
+          this.notifications = data;
+          this.notifications.reverse();
+          this.alertifyService.error("Duyuru başarıyla Silindi!")
+        })
+      })
+    }
+  }
 
 }

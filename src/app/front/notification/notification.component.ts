@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Notification } from 'src/app/models/notification';
 import { UserService } from 'src/app/services/user.service';
 
+
 @Component({
   selector: 'app-notification',
   templateUrl: './notification.component.html',
@@ -15,18 +16,14 @@ export class NotificationComponent implements OnInit {
   ) { }
 
   notifications : Notification[]
-  newNotifications=[]
-
-  
 
   
   ngOnInit() {
     this.userService.getNotifications().subscribe(data =>  {
       this.notifications = data
-
-      
-      console.log(data);
-  
+      this.notifications.reverse()
+      this.notifications = this.notifications.slice(0,4)
+      console.log(data);  
     })
   }
 }
