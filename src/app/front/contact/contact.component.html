@@ -23,24 +23,24 @@
       <i class="fas fa-envelope mb-3"></i>
       <h2 class="mb-4">Bize Ulaşın</h2>
     </div>
-    <form  class="contact-form">
+    <form  class="contact-form" [formGroup]="contactAddForm" (ngSubmit)="sendMail()">
       <div class="form-group">
-        <label for="formGroupExampleInput">Adınız ve Soyadınız</label>
-        <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Adınız ve soyadınız">
+        <label for="senderFullName">Adınız ve Soyadınız</label>
+        <input type="text" name="senderFullName"  class="form-control" id="senderFullName" placeholder="Adınız ve soyadınız" formControlName="senderFullName">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail">Email Adresiniz</label>
-        <input type="email" name="mail" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="E-mail Adresiniz">
+        <label for="senderMail">Email Adresiniz</label>
+        <input type="email" name="senderMail" class="form-control" id="senderMail" formControlName="senderMail" aria-describedby="emailHelp" placeholder="E-mail Adresiniz">
       </div>
       <div class="form-group">
-        <label for="examplePhoneNumber">Telefon</label>
-        <input type="text" class="form-control" id="examplePhoneNumber" name="phone" placeholder="Telefon numaranız">
+        <label for="senderPhone">Telefon</label>
+        <input type="text" class="form-control" id="senderPhone" name="senderPhone" formControlName="senderPhone" placeholder="Telefon numaranız">
       </div>
       <div class="form-group">
-        <label for="exampleTextArea">Mesajınız</label>
-        <textarea class="form-control" id="exampleTextArea" rows="3" name="message" placeholder="Mesajınız"></textarea>
+        <label for="message">Mesajınız</label>
+        <textarea class="form-control" id="message" rows="3" name="message"  formControlName="message" placeholder="Mesajınız"></textarea>
       </div>
-      <button type="submit" name="submit" class="btn mt-2">Gönder</button>
+      <button type="submit" name="submit" class="btn mt-2" [disabled]="!contactAddForm.valid">Gönder</button>
     </form>
   </div>
 </div>

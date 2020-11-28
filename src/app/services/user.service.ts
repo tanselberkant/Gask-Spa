@@ -44,12 +44,10 @@ export class UserService {
   }
 
   sendMessage(inbox) {
-    this.http.post(this.path + 'inbox/add', + inbox).subscribe(data => {
+    this.http.post(this.path + 'inbox/add', inbox).subscribe(data => {      
       this.alertifyService.success("Mesajınızı Başarıyla Gönderdiniz");
-      this.router.navigate(['/']);
+      location.reload();
     })
   }
-  
-
 }
 
