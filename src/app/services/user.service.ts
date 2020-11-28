@@ -45,9 +45,16 @@ export class UserService {
 
   sendMessage(inbox) {
     this.http.post(this.path + 'inbox/add', inbox).subscribe(data => {      
-      this.alertifyService.success("Mesajınızı Başarıyla Gönderdiniz");
-      location.reload();
+      this.alertifyService.success("Mesajınızı Başarıyla Gönderdiniz");      
+      this.reloadPage();
     })
   }
+
+  reloadPage() {
+    setTimeout(() => {
+      window.location.reload();
+    },200)
+  }
+
 }
 
