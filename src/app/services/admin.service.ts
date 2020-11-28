@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Inbox } from '../models/inbox';
 import { AlertifyService } from './alertify.service';
 
 @Injectable({
@@ -15,6 +17,7 @@ export class AdminService {
   ) { }
 
   path = "https://localhost:44308/api/admin/";
+
 
   addAchievement(achievement) {
     this.http.post(this.path + 'achievement/add',achievement).subscribe(data => {
@@ -44,6 +47,9 @@ export class AdminService {
     })
   }
 
-  
+  getMails():Observable<Inbox[]> {
+    return this.http.get<Inbox[]>(this.path + "inbox")
+  }
 
+  
 }

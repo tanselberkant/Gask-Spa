@@ -6,6 +6,7 @@ import { ContAddComponent } from './admin/dashboard/contAdmin/cont-add/cont-add.
 import { ContUpdateComponent } from './admin/dashboard/contAdmin/cont-update/cont-update.component';
 import { ContAdminComponent } from './admin/dashboard/contAdmin/contAdmin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { InboxAdminComponent } from './admin/dashboard/inboxAdmin/inboxAdmin.component';
 import { NotifAddComponent } from './admin/dashboard/notifAdmin/notif-add/notif-add.component';
 import { NotifAdminComponent } from './admin/dashboard/notifAdmin/notifAdmin.component';
 import { AboutComponent } from './front/about/about.component';
@@ -34,7 +35,8 @@ const routes: Routes = [
       {path : "contacts/contactadd",component : ContAddComponent},
       {path : "contacts/contactupdate/:id",component : ContUpdateComponent},
       {path : "notifs",component : NotifAdminComponent},
-      {path : "notifs/notifsadd", component : NotifAddComponent}
+      {path : "notifs/notifsadd", component : NotifAddComponent},
+      {path : "inbox",component : InboxAdminComponent }
     ]
   },
   {
