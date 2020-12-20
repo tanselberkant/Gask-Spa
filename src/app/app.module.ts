@@ -25,6 +25,7 @@ import { ContUpdateComponent } from './admin/dashboard/contAdmin/cont-update/con
 import { NotifAdminComponent } from './admin/dashboard/notifAdmin/notifAdmin.component';
 import { NotifAddComponent } from './admin/dashboard/notifAdmin/notif-add/notif-add.component';
 import { InboxAdminComponent } from './admin/dashboard/inboxAdmin/inboxAdmin.component';
+import { PlayerAdminComponent } from './admin/dashboard/playerAdmin/playerAdmin.component';
 
 
 export function tokenGetter() {
@@ -49,7 +50,8 @@ export function tokenGetter() {
     ContUpdateComponent,
     NotifAdminComponent,
     NotifAddComponent,
-    InboxAdminComponent
+    InboxAdminComponent,
+    PlayerAdminComponent
   ],
   imports: [
     BrowserModule,

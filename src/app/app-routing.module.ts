@@ -9,6 +9,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { InboxAdminComponent } from './admin/dashboard/inboxAdmin/inboxAdmin.component';
 import { NotifAddComponent } from './admin/dashboard/notifAdmin/notif-add/notif-add.component';
 import { NotifAdminComponent } from './admin/dashboard/notifAdmin/notifAdmin.component';
+import { PlayerAdminComponent } from './admin/dashboard/playerAdmin/playerAdmin.component';
 import { AboutComponent } from './front/about/about.component';
 import { AchievementComponent } from './front/achievement/achievement.component';
 import { NavbarComponent } from './front/navbar/navbar.component';
@@ -36,7 +37,8 @@ const routes: Routes = [
       {path : "contacts/contactupdate/:id",component : ContUpdateComponent},
       {path : "notifs",component : NotifAdminComponent},
       {path : "notifs/notifsadd", component : NotifAddComponent},
-      {path : "inbox",component : InboxAdminComponent }
+      {path : "inbox",component : InboxAdminComponent },
+      {path : "players",component : PlayerAdminComponent}
     ]
   },
   {

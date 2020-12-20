@@ -26,15 +26,15 @@
     <form  class="contact-form" [formGroup]="contactAddForm" (ngSubmit)="sendMail()">
       <div class="form-group">
         <label for="senderFullName">Adınız ve Soyadınız</label>
-        <input type="text" name="senderFullName"  class="form-control" id="senderFullName" placeholder="Adınız ve soyadınız" formControlName="senderFullName">
+        <input type="text" name="name"  class="form-control" id="senderFullName" placeholder="Adınız ve soyadınız" formControlName="senderFullName">
       </div>
       <div class="form-group">
         <label for="senderMail">Email Adresiniz</label>
-        <input type="email" name="senderMail" class="form-control" id="senderMail" formControlName="senderMail" aria-describedby="emailHelp" placeholder="E-mail Adresiniz">
+        <input type="email" name="email" class="form-control" id="senderMail" formControlName="senderMail" aria-describedby="emailHelp" placeholder="E-mail Adresiniz">
       </div>
       <div class="form-group">
         <label for="senderPhone">Telefon</label>
-        <input type="text" class="form-control" id="senderPhone" name="senderPhone" formControlName="senderPhone" placeholder="Telefon numaranız">
+        <input type="text" class="form-control" id="senderPhone" name="phone" formControlName="senderPhone" placeholder="Telefon numaranız">
       </div>
       <div class="form-group">
         <label for="message">Mesajınız</label>
@@ -44,3 +44,4 @@
     </form>
   </div>
 </div>
+

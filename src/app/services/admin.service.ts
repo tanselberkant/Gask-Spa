@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Inbox } from '../models/inbox';
+import { Player } from '../models/player';
 import { AlertifyService } from './alertify.service';
 
 @Injectable({
@@ -51,5 +52,8 @@ export class AdminService {
     return this.http.get<Inbox[]>(this.path + "inbox")
   }
 
-  
+  getAllPlayer():Observable<Player[]> {
+    return this.http.get<Player[]>(this.path + "players")
+  }
+
 }

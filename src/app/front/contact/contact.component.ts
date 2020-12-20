@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Contact } from 'src/app/models/contact';
@@ -14,7 +15,8 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private userService : UserService,
-    private formBuilder : FormBuilder
+    private formBuilder : FormBuilder,
+    private http : HttpClient
   ) { }
 
   contacts : Contact[]  

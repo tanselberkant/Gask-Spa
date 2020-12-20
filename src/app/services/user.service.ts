@@ -46,7 +46,7 @@ export class UserService {
   sendMessage(inbox) {
     this.http.post(this.path + 'inbox/add', inbox).subscribe(data => {      
       this.alertifyService.success("Mesajınızı Başarıyla Gönderdiniz");      
-      this.reloadPage();
+      // this.reloadPage();
     })
   }
 
