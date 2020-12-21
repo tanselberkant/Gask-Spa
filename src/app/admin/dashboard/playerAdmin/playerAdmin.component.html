@@ -1,3 +1,77 @@
-<p>
-  playerAdmin works!
-</p>
+<div class="container">
+  <h2>Tüm Oyuncular</h2>
+  <a routerLink="playeradd" class="nav-link">Yeni bir oyuncu Eklemek için tıklayınız</a>
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Adı Soyadı</th>
+        <th scope="col">Takımı</th>
+        <th scope="col">Takım Rolü</th>
+        <th scope="col">Sol / Sağ</th>
+        <th scope="col">Fotoğrafı</th>
+        <th scope="col">Sil</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of players">
+      <tr>
+        <th scope="row"> {{item.id}} </th>
+        <td> {{item.firstName}} {{item.lastName}} </td>
+        
+        <td>
+          <div *ngIf="item.teamId == '1'">
+            Minikler
+          </div>
+          <div *ngIf="item.teamId == '2'">
+            Yıldız B
+          </div>
+          <div *ngIf="item.teamId == '3'">
+            Yıldız A
+          </div>
+          <div *ngIf="item.teamId == '4'">
+            Genç Erkekler
+          </div>
+          <div *ngIf="item.teamId == '5'">
+            Genç Kadınlar
+          </div>
+          <div *ngIf="item.teamId == '6'">
+            Kadınlar
+          </div>
+          <div *ngIf="item.teamId == '7'">
+            Erkekler
+          </div>
+          <div *ngIf="item.teamId == '8'">
+            Milli Sporcu
+          </div>
+        </td>
+        
+        <td>
+          <div *ngIf="item.teamRole == '0'">
+            Forvet
+          </div>
+          <div *ngIf="item.teamRole == '1'">
+            Defans
+          </div>
+          <div *ngIf="item.teamRole == '2'">
+            Kaleci
+          </div>
+        </td>
+
+        <td>
+          <div *ngIf="item.stickSide == '0'">
+            Sol
+          </div>
+          <div *ngIf="item.stickSide == '1'">
+            Sağ
+          </div>
+        </td>
+        
+        <td> FOTO </td>
+        
+        <td>
+          <button class="btn btn-danger btn-sm pl-1" (click)="deletePlayer(item.id)">Del</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

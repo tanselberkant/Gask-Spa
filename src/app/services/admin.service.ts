@@ -19,12 +19,18 @@ export class AdminService {
 
   path = "https://localhost:44308/api/admin/";
 
-
   addAchievement(achievement) {
     this.http.post(this.path + 'achievement/add',achievement).subscribe(data => {
       this.alertifyService.success("Başarı Başarıyla eklendi!");
       this.router.navigate(['/admin/achievs']);
     })
+  }
+
+  addPlayer(player) {
+    this.http.post(this.path + 'player/add',player).subscribe(data => {
+      this.alertifyService.success("Oyuncu Başarıyla eklendi!");
+      this.router.navigate(['/admin/players']);
+    }) 
   }
 
   addContact(contact) {

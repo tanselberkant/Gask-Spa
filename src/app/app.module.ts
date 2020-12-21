@@ -26,6 +26,8 @@ import { NotifAdminComponent } from './admin/dashboard/notifAdmin/notifAdmin.com
 import { NotifAddComponent } from './admin/dashboard/notifAdmin/notif-add/notif-add.component';
 import { InboxAdminComponent } from './admin/dashboard/inboxAdmin/inboxAdmin.component';
 import { PlayerAdminComponent } from './admin/dashboard/playerAdmin/playerAdmin.component';
+import { PlayerAddComponent } from './admin/dashboard/playerAdmin/player-add/player-add.component';
+import { MenTeamComponent } from './front/teams/men-team/men-team.component';
 
 
 export function tokenGetter() {
@@ -51,7 +53,9 @@ export function tokenGetter() {
     NotifAdminComponent,
     NotifAddComponent,
     InboxAdminComponent,
-    PlayerAdminComponent
+    PlayerAdminComponent,
+    PlayerAddComponent,
+    MenTeamComponent
   ],
   imports: [
     BrowserModule,

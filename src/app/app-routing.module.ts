@@ -9,10 +9,12 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { InboxAdminComponent } from './admin/dashboard/inboxAdmin/inboxAdmin.component';
 import { NotifAddComponent } from './admin/dashboard/notifAdmin/notif-add/notif-add.component';
 import { NotifAdminComponent } from './admin/dashboard/notifAdmin/notifAdmin.component';
+import { PlayerAddComponent } from './admin/dashboard/playerAdmin/player-add/player-add.component';
 import { PlayerAdminComponent } from './admin/dashboard/playerAdmin/playerAdmin.component';
 import { AboutComponent } from './front/about/about.component';
 import { AchievementComponent } from './front/achievement/achievement.component';
 import { NavbarComponent } from './front/navbar/navbar.component';
+import { MenTeamComponent } from './front/teams/men-team/men-team.component';
 import { TeamsComponent } from './front/teams/teams.component';
 import { SignInComponent } from './login/signIn/signIn.component';
 import { AuthGuardService } from './services/authGuard.service';
@@ -24,6 +26,14 @@ const routes: Routes = [
   {
     path : 'front',component:NavbarComponent,children : [
       {path : "teams",component:TeamsComponent},
+      // {path : "teams/junior"},
+      // {path : "teams/youngB"},
+      // {path : "teams/youngA"},
+      // {path : "teams/seniorman"},
+      // {path : "teams/seniorwoman"},
+      // {path : "teams/women"},
+      {path : "teams/7",component : MenTeamComponent},
+      // {path : "teams/nationalplayers"},
       {path : "about",component:AboutComponent},
       {path : "achievements",component : AchievementComponent}
     ]
@@ -38,7 +48,9 @@ const routes: Routes = [
       {path : "notifs",component : NotifAdminComponent},
       {path : "notifs/notifsadd", component : NotifAddComponent},
       {path : "inbox",component : InboxAdminComponent },
-      {path : "players",component : PlayerAdminComponent}
+      {path : "players",component : PlayerAdminComponent},
+      {path : "players/playeradd",component : PlayerAddComponent}
+      
     ]
   },
   {

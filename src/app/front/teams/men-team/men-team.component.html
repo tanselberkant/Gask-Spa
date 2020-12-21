@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark rounded box-shadow">
+    <div class="1h-100">
+      <h6 class="mb-0 text-white 1h-100">Erkekler Takımımız</h6>
+    </div>
+  </div>
+  <div>
+    <div id="oyuncularDeneme" *ngFor="let item of players">
+      <p>Kaleciler</p>
+      <div id="kaleciDeneme" *ngIf="item.teamRole == '2'">
+
+        <div class="card">
+          <div class="imgBx">
+            <img src="../../../../assets/images/myAboutImage.jpeg">
+          </div>
+          <div class="contentBx">
+            <h2> {{item.firstName}} {{item.lastName}} </h2>
+            <h3> {{item.teamRole}} </h3>
+            <h3> {{item.stickSide}} </h3>
+          </div>
+
+        </div>
+      </div>
+
+      <p>Defans</p>
+      <div id="defansDeneme" *ngIf="item.teamRole == '1'">
+        <div class="card">
+          <div class="imgBx">
+            <img src="../../../../assets/images/myAboutImage.jpeg">
+          </div>
+          <div class="contentBx">
+            <h2> {{item.firstName}} {{item.lastName}} </h2>
+            <h3> {{item.teamRole}} </h3>
+            <h3> {{item.stickSide}} </h3>
+          </div>
+        </div>
+      </div>
+
+      <p>Forvetler</p>
+      <div id="forvetDeneme" *ngIf="item.teamRole == '0'">
+        <div class="card">
+          <div class="imgBx">
+            <img src="../../../../assets/images/myAboutImage.jpeg">
+          </div>
+          <div class="contentBx">
+            <h2> {{item.firstName}} {{item.lastName}} </h2>
+            <h3> {{item.teamRole}} </h3>
+            <h3> {{item.stickSide}} </h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <form [formGroup]="playerAddForm" (ngSubmit)="add()">
+      <h2 class="mt-3 pt-3">Yeni bir oyuncu ekle</h2>
+      
+      <div class="form-group">
+        <input type="text" id="firstName" name="firstName" formControlName="firstName" class="form-control" placeholder="Ad" autofocus>
+        <span class="help-block" *ngIf="playerAddForm.get('firstName').hasError('required') && playerAddForm.get('firstName').touched">
+          İsim Girmek Zorunludur!
+        </span>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="lastName" name="lastName" formControlName="lastName" class="form-control" placeholder="Soyad">
+        <span class="help-block" *ngIf="playerAddForm.get('lastName').hasError('required') && playerAddForm.get('lastName').touched">
+          Soyad Girmek Zorunludur!
+        </span>
+      </div>
+
+      <div class="form-group">
+        <select name="teamId" formControlName="teamId" class="form-control">
+          <option value="" disabled selected>Oyuncunun Oynadığı Takımı Seçiniz</option>
+          <option value="1">Minikler</option>
+          <option value="2">Yıldız B</option>
+          <option value="3">Yıldız A</option>
+          <option value="4">Genç Erkekler</option>
+          <option value="5">Genç Kadınlar</option>
+          <option value="6">Kadınlar</option>
+          <option value="7">Erkekler</option>
+          <option value="8">Milli Sporcu</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="stickSide" formControlName="stickSide" class="form-control">
+          <option value="" disabled selected>Oyuncunun Sopa Yönünü Belirtiniz</option>
+          <option value="Left">Sol</option>
+          <option value="Right">Sağ</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="teamRole" formControlName="teamRole" class="form-control">
+          <option value="" disabled selected>Oyuncunu Mevkisini Belirtiniz</option>
+          <option value="Forward">Forvet</option>
+          <option value="Defenceman">Defans</option>
+          <option value="Goalie">Kaleci</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!playerAddForm.valid">Oyuncuyu Ekle</button>
+
+    </form>
+  </div>
+</div>

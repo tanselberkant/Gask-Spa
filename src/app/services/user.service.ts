@@ -7,6 +7,7 @@ import { Achievement } from '../models/achievement';
 import { Contact } from '../models/contact';
 import { Inbox } from '../models/inbox';
 import { Notification } from '../models/notification';
+import { Player } from '../models/player';
 import { Team } from '../models/team';
 import { AlertifyService } from './alertify.service';
 
@@ -55,6 +56,39 @@ export class UserService {
       window.location.reload();
     },200)
   }
+
+  getJuniorPlayers():Observable<Player[]> {
+    return this.http.get<Player[]>(this.path + "team/1");
+  }
+
+  getYoungBPlayers():Observable<Player[]> {
+    return this.http.get<Player[]>(this.path + "team/2");
+  }
+
+  getYoungAPlayers():Observable<Player[]> {
+    return this.http.get<Player[]>(this.path + "team/3");
+  }
+
+  getSeniorMen():Observable<Player[]> {
+    return this.http.get<Player[]>(this.path + "team/4");
+  }
+
+  getSeniorWomen():Observable<Player[]> {
+    return this.http.get<Player[]>(this.path + "team/5");
+  }
+
+  getWomenTeam():Observable<Player[]> {
+    return this.http.get<Player[]>(this.path + "team/6");
+  }
+
+  getMenTeam():Observable<Player[]> {
+    return this.http.get<Player[]>(this.path + "team/7");
+  }
+
+  getNationalPlayers():Observable<Player[]> {
+    return this.http.get<Player[]>(this.path + "team/8");
+  }
+
 
 }
 
