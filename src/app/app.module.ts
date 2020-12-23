@@ -28,7 +28,13 @@ import { InboxAdminComponent } from './admin/dashboard/inboxAdmin/inboxAdmin.com
 import { PlayerAdminComponent } from './admin/dashboard/playerAdmin/playerAdmin.component';
 import { PlayerAddComponent } from './admin/dashboard/playerAdmin/player-add/player-add.component';
 import { MenTeamComponent } from './front/teams/men-team/men-team.component';
-
+import { JuniorTeamComponent } from './front/teams/junior-team/junior-team.component';
+import { YoungBTeamComponent } from './front/teams/youngB-team/youngB-team.component';
+import { YoungATeamComponent } from './front/teams/youngA-team/youngA-team.component';
+import { SeniorMenTeamComponent } from './front/teams/seniorMen-team/seniorMen-team.component';
+import { SeniorWomenTeamComponent } from './front/teams/seniorWomen-team/seniorWomen-team.component';
+import { WomenTeamComponent } from './front/teams/women-team/women-team.component';
+import { NationalTeamComponent } from './front/teams/national-team/national-team.component';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -55,7 +61,14 @@ export function tokenGetter() {
     InboxAdminComponent,
     PlayerAdminComponent,
     PlayerAddComponent,
-    MenTeamComponent
+    MenTeamComponent,
+    JuniorTeamComponent,
+    YoungBTeamComponent,
+    YoungATeamComponent,
+    SeniorMenTeamComponent,
+    SeniorWomenTeamComponent,
+    WomenTeamComponent,
+    NationalTeamComponent
   ],
   imports: [
     BrowserModule,

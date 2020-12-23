@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark rounded box-shadow">
+    <div class="1h-100">
+      <h6 class="mb-0 text-white 1h-100">Milli Sporcularımız</h6>
+    </div>
+  </div>
+  <div>
+   
+    <div class="row">
+      <div *ngFor="let item of players" >     
+        <div id="kaleciDeneme" class="col-sm-4">
+          <div class="card">
+            <div class="imgBx">
+              <img src="../../../../assets/images/myAboutImage.jpeg">
+            </div>
+            <div class="contentBx">
+              <h2> {{item.firstName}} {{item.lastName}} </h2>
+              <h3 *ngIf="item.teamRole == '2'">Kaleci</h3>
+              <h3 *ngIf="item.teamRole == '1'">Defans</h3>
+              <h3 *ngIf="item.teamRole == '0'">Forvet</h3>
+              <h3>
+                <div *ngIf="item.stickSide == '0'">
+                  Sol
+                </div>
+                <div *ngIf="item.stickSide == '1'">
+                  Sağ
+                </div>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+  
+    
+
+   
+
+
+  </div>
+</div>

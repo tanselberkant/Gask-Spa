@@ -3,25 +3,23 @@ import { Player } from 'src/app/models/player';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-men-team',
-  templateUrl: './men-team.component.html',
-  styleUrls: ['./men-team.component.scss']
+  selector: 'app-seniorMen-team',
+  templateUrl: './seniorMen-team.component.html',
+  styleUrls: ['./seniorMen-team.component.scss']
 })
-export class MenTeamComponent implements OnInit {
+export class SeniorMenTeamComponent implements OnInit {
 
   constructor(
     private userService : UserService
   ) { }
 
   players : Player[]
-
+  
   ngOnInit() {
-    this.userService.getMenTeam().subscribe(data => {
+    this.userService.getSeniorMen().subscribe(data => {
       this.players = data;
-      console.log(data);
+      console.log(data)
     })
   }
 
 }
-
-

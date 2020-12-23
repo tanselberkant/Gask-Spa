@@ -11,7 +11,31 @@
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
                 <strong class="d-block text-gray-dark"> {{item.teamName}} </strong>
             </p>
-            <a class="nav-link" routerLink="7">Takım Detay</a>
+            <div *ngIf="item.id == '1'">
+                <a class="nav-link" routerLink="1">Takım Detay</a>
+            </div>
+            <div *ngIf="item.id == '2'">
+                <a class="nav-link" routerLink="2">Takım Detay</a>
+            </div>
+            <div *ngIf="item.id == '3'">
+                <a class="nav-link" routerLink="3">Takım Detay</a>
+            </div>
+            <div *ngIf="item.id == '4'">
+                <a class="nav-link" routerLink="4">Takım Detay</a>
+            </div>
+            <div *ngIf="item.id == '5'">
+                <a class="nav-link" routerLink="5">Takım Detay</a>
+            </div>
+            <div *ngIf="item.id == '6'">
+                <a class="nav-link" routerLink="6">Takım Detay</a>
+            </div>
+            <div *ngIf="item.id == '7'">
+                <a class="nav-link" routerLink="7">Takım Detay</a>
+            </div>
+            <div *ngIf="item.id == '8'">
+                <a class="nav-link" routerLink="8">Takım Detay</a>
+            </div>
         </div>
     </div>
 </main>
+

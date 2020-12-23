@@ -14,8 +14,15 @@ import { PlayerAdminComponent } from './admin/dashboard/playerAdmin/playerAdmin.
 import { AboutComponent } from './front/about/about.component';
 import { AchievementComponent } from './front/achievement/achievement.component';
 import { NavbarComponent } from './front/navbar/navbar.component';
+import { JuniorTeamComponent } from './front/teams/junior-team/junior-team.component';
 import { MenTeamComponent } from './front/teams/men-team/men-team.component';
+import { NationalTeamComponent } from './front/teams/national-team/national-team.component';
+import { SeniorMenTeamComponent } from './front/teams/seniorMen-team/seniorMen-team.component';
+import { SeniorWomenTeamComponent } from './front/teams/seniorWomen-team/seniorWomen-team.component';
 import { TeamsComponent } from './front/teams/teams.component';
+import { WomenTeamComponent } from './front/teams/women-team/women-team.component';
+import { YoungATeamComponent } from './front/teams/youngA-team/youngA-team.component';
+import { YoungBTeamComponent } from './front/teams/youngB-team/youngB-team.component';
 import { SignInComponent } from './login/signIn/signIn.component';
 import { AuthGuardService } from './services/authGuard.service';
 
@@ -26,14 +33,14 @@ const routes: Routes = [
   {
     path : 'front',component:NavbarComponent,children : [
       {path : "teams",component:TeamsComponent},
-      // {path : "teams/junior"},
-      // {path : "teams/youngB"},
-      // {path : "teams/youngA"},
-      // {path : "teams/seniorman"},
-      // {path : "teams/seniorwoman"},
-      // {path : "teams/women"},
+      {path : "teams/1",component : JuniorTeamComponent},
+      {path : "teams/2",component : YoungBTeamComponent},
+      {path : "teams/3",component : YoungATeamComponent},
+      {path : "teams/4",component : SeniorMenTeamComponent},
+      {path : "teams/5",component : SeniorWomenTeamComponent},
+      {path : "teams/6",component : WomenTeamComponent},
       {path : "teams/7",component : MenTeamComponent},
-      // {path : "teams/nationalplayers"},
+      {path : "teams/8",component : NationalTeamComponent},
       {path : "about",component:AboutComponent},
       {path : "achievements",component : AchievementComponent}
     ]

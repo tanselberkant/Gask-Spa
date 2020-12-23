@@ -3,11 +3,11 @@ import { Player } from 'src/app/models/player';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-men-team',
-  templateUrl: './men-team.component.html',
-  styleUrls: ['./men-team.component.scss']
+  selector: 'app-youngB-team',
+  templateUrl: './youngB-team.component.html',
+  styleUrls: ['./youngB-team.component.scss']
 })
-export class MenTeamComponent implements OnInit {
+export class YoungBTeamComponent implements OnInit {
 
   constructor(
     private userService : UserService
@@ -16,12 +16,8 @@ export class MenTeamComponent implements OnInit {
   players : Player[]
 
   ngOnInit() {
-    this.userService.getMenTeam().subscribe(data => {
+    this.userService.getYoungBPlayers().subscribe( data => {
       this.players = data;
-      console.log(data);
     })
   }
-
 }
-
-
