@@ -7,5 +7,8 @@ export class Player extends BaseModel {
     stickSide : string;
     teamRole : string;
     teamId : number;
-    photo : Photo
+    imageName : string;
+    imageFile : File;
+    imageSrc : string;
 }
+

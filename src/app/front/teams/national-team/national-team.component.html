@@ -11,7 +11,7 @@
         <div id="kaleciDeneme" class="col-sm-4">
           <div class="card">
             <div class="imgBx">
-              <img src="../../../../assets/images/myAboutImage.jpeg">
+              <img [src]="item.imageSrc"> 
             </div>
             <div class="contentBx">
               <h2> {{item.firstName}} {{item.lastName}} </h2>
@@ -30,13 +30,6 @@
           </div>
         </div>
       </div>  
-    </div>
-
-  
-    
-
-   
-
-
+    </div>    
   </div>
 </div>

@@ -11,7 +11,7 @@
         <div id="kaleciDeneme" class="col-sm-4" *ngIf="item.teamRole == '2'">
           <div class="card">
             <div class="imgBx">
-              <img src="../../../../assets/images/myAboutImage.jpeg">
+              <img [src]="item.imageSrc">
             </div>
             <div class="contentBx">
               <h2> {{item.firstName}} {{item.lastName}} </h2>
@@ -36,7 +36,7 @@
         <div id="oyuncuDeneme" class="col-sm-4" *ngIf="item.teamRole == '1'">
           <div class="card">
             <div class="imgBx">
-              <img src="../../../../assets/images/myAboutImage.jpeg">
+              <img [src]="item.imageSrc">
             </div>
             <div class="contentBx">
               <h2> {{item.firstName}} {{item.lastName}} </h2>
@@ -62,7 +62,7 @@
         <div id="kaleciDeneme" class="col-sm-4" *ngIf="item.teamRole == '0'">
           <div class="card">
             <div class="imgBx">
-              <img src="../../../../assets/images/myAboutImage.jpeg">
+              <img [src]="item.imageSrc">
             </div>
             <div class="contentBx">
               <h2> {{item.firstName}} {{item.lastName}} </h2>

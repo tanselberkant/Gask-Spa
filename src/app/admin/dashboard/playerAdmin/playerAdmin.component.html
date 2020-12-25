@@ -66,7 +66,9 @@
           </div>
         </td>
         
-        <td> FOTO </td>
+        <td>
+          <img [src]="item.imageSrc" style="height: 40px; width: 30px;">
+        </td>
         
         <td>
           <button class="btn btn-danger btn-sm pl-1" (click)="deletePlayer(item.id)">Del</button>

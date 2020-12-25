@@ -26,11 +26,24 @@ export class AdminService {
     })
   }
 
-  addPlayer(player) {
-    this.http.post(this.path + 'player/add',player).subscribe(data => {
-      this.alertifyService.success("Oyuncu Başarıyla eklendi!");
-      this.router.navigate(['/admin/players']);
-    }) 
+  // addPlayer(player) {
+  //   this.http.post(this.path + 'player/add',player).subscribe(data => {
+  //     this.alertifyService.success("Oyuncu Başarıyla eklendi!");
+  //     this.router.navigate(['/admin/players']);
+  //   }) 
+  // }
+
+  addPlayer(firstName,lastName,teamId,stickSide,teamRole,imageName,imageFile : File) {  
+    const formData : FormData = new FormData();
+    formData.append('ImageFile',imageFile,imageFile.name);
+    formData.append('FirstName',firstName);
+    formData.append('LastName',lastName);
+    formData.append('TeamId',teamId);
+    formData.append('StickSide',stickSide);
+    formData.append('TeamRole',teamRole);
+    formData.append('ImageName',imageName)
+
+    return this.http.post(this.path + 'player/add',formData);
   }
 
   addContact(contact) {
