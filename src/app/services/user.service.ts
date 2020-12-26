@@ -29,7 +29,11 @@ export class UserService {
   }
 
   getNotifications():Observable<Notification[]>{
-    return this.http.get<Notification[]>(this.path + "notification");
+    return this.http.get<Notification[]>(this.path + "notifications");
+  }
+
+  getNotificationById(notifId):Observable<Notification> {
+    return this.http.get<Notification>(this.path + "notification/?id="+notifId);
   }
 
   getAchievements():Observable<Achievement[]> {

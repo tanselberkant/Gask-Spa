@@ -4,7 +4,9 @@
     <div class="card-body">
       <div class="announHolder" *ngFor="let item of notifications">        
         <p class="card-text">
-          {{item.notificationContent  }} 
+          <a routerLink="notification/{{item.id}}">
+            {{item.notificationContent  }} 
+          </a>          
         </p>
         <hr>
       </div>

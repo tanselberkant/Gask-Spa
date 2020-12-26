@@ -6,6 +6,8 @@ import { ContAddComponent } from './admin/dashboard/contAdmin/cont-add/cont-add.
 import { ContUpdateComponent } from './admin/dashboard/contAdmin/cont-update/cont-update.component';
 import { ContAdminComponent } from './admin/dashboard/contAdmin/contAdmin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { GalleryAddComponent } from './admin/dashboard/galleryAdmin/galleryAdd/galleryAdd.component';
+import { GalleryAdminComponent } from './admin/dashboard/galleryAdmin/galleryAdmin.component';
 import { InboxAdminComponent } from './admin/dashboard/inboxAdmin/inboxAdmin.component';
 import { NotifAddComponent } from './admin/dashboard/notifAdmin/notif-add/notif-add.component';
 import { NotifAdminComponent } from './admin/dashboard/notifAdmin/notifAdmin.component';
@@ -13,7 +15,9 @@ import { PlayerAddComponent } from './admin/dashboard/playerAdmin/player-add/pla
 import { PlayerAdminComponent } from './admin/dashboard/playerAdmin/playerAdmin.component';
 import { AboutComponent } from './front/about/about.component';
 import { AchievementComponent } from './front/achievement/achievement.component';
+import { GalleryComponent } from './front/gallery/gallery.component';
 import { NavbarComponent } from './front/navbar/navbar.component';
+import { NotifDetailComponent } from './front/notification/notif-detail/notif-detail.component';
 import { JuniorTeamComponent } from './front/teams/junior-team/junior-team.component';
 import { MenTeamComponent } from './front/teams/men-team/men-team.component';
 import { NationalTeamComponent } from './front/teams/national-team/national-team.component';
@@ -42,7 +46,9 @@ const routes: Routes = [
       {path : "teams/7",component : MenTeamComponent},
       {path : "teams/8",component : NationalTeamComponent},
       {path : "about",component:AboutComponent},
-      {path : "achievements",component : AchievementComponent}
+      {path : "achievements",component : AchievementComponent},
+      {path : "notification/:notifId",component : NotifDetailComponent},
+      {path : "gallery",component : GalleryComponent}
     ]
   },
   {
@@ -56,8 +62,9 @@ const routes: Routes = [
       {path : "notifs/notifsadd", component : NotifAddComponent},
       {path : "inbox",component : InboxAdminComponent },
       {path : "players",component : PlayerAdminComponent},
-      {path : "players/playeradd",component : PlayerAddComponent}
-      
+      {path : "players/playeradd",component : PlayerAddComponent},
+      {path : "myphotos",component: GalleryAdminComponent},
+      {path : "myphotos/photoadd",component: GalleryAddComponent}
     ]
   },
   {

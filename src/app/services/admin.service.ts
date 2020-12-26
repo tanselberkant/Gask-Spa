@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { Gallery } from '../models/gallery';
 import { Inbox } from '../models/inbox';
 import { Player } from '../models/player';
 import { AlertifyService } from './alertify.service';
@@ -26,12 +27,6 @@ export class AdminService {
     })
   }
 
-  // addPlayer(player) {
-  //   this.http.post(this.path + 'player/add',player).subscribe(data => {
-  //     this.alertifyService.success("Oyuncu Başarıyla eklendi!");
-  //     this.router.navigate(['/admin/players']);
-  //   }) 
-  // }
 
   addPlayer(firstName,lastName,teamId,stickSide,teamRole,imageName,imageFile : File) {  
     const formData : FormData = new FormData();
@@ -44,6 +39,16 @@ export class AdminService {
     formData.append('ImageName',imageName)
 
     return this.http.post(this.path + 'player/add',formData);
+  }
+
+
+  addPhoto(imageName,imageFile : File) {
+    const formData : FormData = new FormData();
+    formData.append('ImageFile',imageFile,imageFile.name);
+    formData.append('ImageName',imageName)
+
+    this.alertifyService.success("Fotoğraf Başarı ile eklendi");
+    return this.http.post(this.path + 'gallery/add',formData);
   }
 
   addContact(contact) {
@@ -75,4 +80,15 @@ export class AdminService {
     return this.http.get<Player[]>(this.path + "players")
   }
 
+  getPhotos():Observable<Gallery[]> {
+    return this.http.get<Gallery[]>(this.path + "gallery")
+  }
+
+  
+  // addPlayer(player) {
+  //   this.http.post(this.path + 'player/add',player).subscribe(data => {
+  //     this.alertifyService.success("Oyuncu Başarıyla eklendi!");
+  //     this.router.navigate(['/admin/players']);
+  //   }) 
+  // }
 }

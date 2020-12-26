@@ -22,7 +22,7 @@ export class NotificationComponent implements OnInit {
     this.userService.getNotifications().subscribe(data =>  {
       this.notifications = data
       this.notifications.reverse()
-      this.notifications = this.notifications.slice(0,4)
+      this.notifications = this.notifications.slice(0,5)
       console.log(data);  
     })
   }

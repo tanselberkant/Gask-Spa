@@ -35,6 +35,10 @@ import { SeniorMenTeamComponent } from './front/teams/seniorMen-team/seniorMen-t
 import { SeniorWomenTeamComponent } from './front/teams/seniorWomen-team/seniorWomen-team.component';
 import { WomenTeamComponent } from './front/teams/women-team/women-team.component';
 import { NationalTeamComponent } from './front/teams/national-team/national-team.component';
+import { GalleryComponent } from './front/gallery/gallery.component';
+import { NotifDetailComponent } from './front/notification/notif-detail/notif-detail.component';
+import { GalleryAdminComponent } from './admin/dashboard/galleryAdmin/galleryAdmin.component';
+import { GalleryAddComponent } from './admin/dashboard/galleryAdmin/galleryAdd/galleryAdd.component';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -68,7 +72,11 @@ export function tokenGetter() {
     SeniorMenTeamComponent,
     SeniorWomenTeamComponent,
     WomenTeamComponent,
-    NationalTeamComponent
+    NationalTeamComponent,
+    GalleryComponent,
+    NotifDetailComponent,
+    GalleryAdminComponent,
+    GalleryAddComponent
   ],
   imports: [
     BrowserModule,
