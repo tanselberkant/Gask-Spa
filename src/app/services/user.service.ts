@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { About } from '../models/about';
 import { Achievement } from '../models/achievement';
 import { Contact } from '../models/contact';
+import { Gallery } from '../models/gallery';
 import { Inbox } from '../models/inbox';
 import { Notification } from '../models/notification';
 import { Player } from '../models/player';
@@ -46,6 +47,10 @@ export class UserService {
 
   getTeams():Observable<Team[]>{
     return this.http.get<Team[]>(this.path + "team");
+  }
+
+  getPhotos():Observable<Gallery[]> {
+    return this.http.get<Gallery[]>(this.path + "gallery");
   }
 
   sendMessage(inbox) {
