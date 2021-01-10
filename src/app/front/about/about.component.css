@@ -1,0 +1,22 @@
+.myBlock {
+    background-color: black;
+    text-align: center;
+}
+
+.myBlock h4 {
+    text-align: center;
+}
+
+.aboutContent {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.aboutContent p {
+    font-size: 15px !important;
+    line-height: 1.8;
+
+}
+
+.aboutContent h2 {
+    font-weight: 700;
+}

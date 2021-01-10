@@ -13,11 +13,23 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
 
-  <app-root></app-root> 
+ 
+  <app-root></app-root>
+
+  <script type="text/javascript">
+
+    window.addEventListener("scroll",function() {
+      var nav = document.querySelector("nav");
+      nav.classList.toggle("sticky", window.scrollY > 0);
+    })
+  </script>
+  
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script src="https://kit.fontawesome.com/6c120828bf.js"></script>

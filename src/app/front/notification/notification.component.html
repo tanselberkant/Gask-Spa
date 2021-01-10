@@ -1,14 +1,19 @@
   
-   <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-    <div class="card-header">Duyurular</div>
-    <div class="card-body">
-      <div class="announHolder" *ngFor="let item of notifications">        
-        <p class="card-text">
-          <a routerLink="notification/{{item.id}}">
-            {{item.notificationContent  }} 
-          </a>          
-        </p>
-        <hr>
+   <div class="container">
+    <div class="card text-white myBlock mb-3" style="max-width: 18rem;">
+      <div class="card-header pt-4">
+        <h4>Duyurular</h4>
       </div>
-    </div>
-  </div> 
+      <div class="card-body">
+        <div class="announHolder" *ngFor="let item of notifications">        
+          <p class="card-text">
+            <a routerLink="notification/{{item.id}}">
+              {{item.notificationContent | slice: 0: 25 }}...
+            </a>          
+          </p>
+          <hr>
+        </div>
+      </div>
+    </div> 
+  
+   </div>

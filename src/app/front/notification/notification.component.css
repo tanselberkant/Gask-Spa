@@ -1,0 +1,11 @@
+.myBlock {
+    background-color: #1b262c ;
+    text-align: center;
+    color: #fff;
+}
+
+.card-body p a {
+    color: #fff !important;
+}
+
+

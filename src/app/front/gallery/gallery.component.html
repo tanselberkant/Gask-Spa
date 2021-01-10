@@ -1,15 +1,23 @@
-<section class="gallery">
-  <div class="container">
-    <div class="row">
-      <div class="gallery-filter">
-        <span class="filter-item">Fotoğraflar</span>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="gallery-item" *ngFor="let item of gallery">
-        <img [src]="item.imageSrc">
-      </div>
+<div class="container mb-3">
+  <div class="d-flex p-3 my-3 text-white-50 rounded box-shadow myBlock">
+    <div class="1h-100 text-center">
+      <h4 class="mb-0 text-white pl-2">Galerimiz</h4>
     </div>
   </div>
-</section>
+
+  <section class="gallery">
+    <div class="container">
+      <div class="row">
+        <div class="gallery-item" *ngFor="let item of gallery">
+          <img [src]="item.imageSrc" />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- <div class="row">
+  <div class="gallery-item" *ngFor="let item of gallery">
+    <img [src]="item.imageSrc">
+  </div>
+</div> -->

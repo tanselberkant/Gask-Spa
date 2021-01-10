@@ -1,0 +1,17 @@
+.myBlock {
+    background-color: black;
+    text-align: center;
+}
+
+.myBlock h4 {
+    text-align: center;
+}
+
+.benimKupam p {
+    font-size: 16px;
+}
+
+.benimKupam p a {
+    color: #000 !important;
+}
+
