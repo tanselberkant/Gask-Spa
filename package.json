@@ -23,6 +23,7 @@
     "@sendgrid/mail": "^7.4.0",
     "alertifyjs": "^1.13.1",
     "bootstrap": "^4.5.2",
+    "emailjs-com": "^2.6.4",
     "font-awesome": "^4.7.0",
     "fontawesome": "^5.6.3",
     "ngx-limit-to-pipe": "^1.0.0-rc30",

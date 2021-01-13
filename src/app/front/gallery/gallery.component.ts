@@ -18,7 +18,8 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
     this.userService.getPhotos().subscribe(data => {
       this.gallery = data;
-      console.log(data);
+      this.gallery.reverse();
+      this.gallery = this.gallery.slice(0,15);      
     })
   }
 }

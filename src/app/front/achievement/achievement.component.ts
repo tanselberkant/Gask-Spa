@@ -17,8 +17,7 @@ export class AchievementComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getAchievements().subscribe(data => {
-      this.achievements = data;
-      console.log(data);
+      this.achievements = data;     
     })
   }
 

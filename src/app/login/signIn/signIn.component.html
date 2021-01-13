@@ -1,18 +1,47 @@
-<div class="container">
+<!-- <div class="container">
   <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
     <div class="text-center mb-4">
       <h1 class="h3 mb-3 font-weight-normal">Giriş Yap</h1>
-      <div *ngIf="invalidLogin" class="alert alert-danger">Yanlıs Kullanıcı Adı ya da Şifre</div>
+      <div *ngIf="invalidLogin" class="alert alert-danger">
+        Yanlıs Kullanıcı Adı ya da Şifre
+      </div>
     </div>
     <div class="form-label-group">
-      <input type="text" id="username" name="username" ngModel class="form-control" placeholder="Kullanıcı Adı" required autofocus>
+      <input type="text" id="username" name="username" ngModel class="form-control" placeholder="Kullanıcı Adı" required
+        autofocus />
       <label for="inputEmail">Kullanıcı Adı</label>
     </div>
-  
+
     <div class="form-label-group">
-      <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Şifreniz" required>
+      <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Şifreniz"
+        required />
       <label for="inputPassword">Sifreniz</label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">
+      Sign in
+    </button>
+  </form>
+</div> -->
+
+<div class="container">
+  <h1>Giriş Yap</h1>
+  <form class="" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <div *ngIf="invalidLogin" class="alert alert-danger">
+      Yanlıs Kullanıcı Adı ya da Şifre
+    </div>
+    <div class="input-field">
+      <input type="text" id="username" name="username" ngModel class=""  required
+        autofocus />
+      <label>Kullanıcı Adı</label> 
+    </div>
+    <div class="input-field">
+      <input type="password" id="password" name="password" ngModel class=""  required />
+      <label>Şifreniz</label> 
+    </div>
+    <div class="button">
+      <div class="inner"></div>
+      <button class="" type="submit">Giriş Yap</button>
+    </div>
   </form>
 </div>
+

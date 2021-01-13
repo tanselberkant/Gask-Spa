@@ -17,7 +17,7 @@
         <td> {{item.senderFullName}} </td>
         <td> {{item.senderMail}} </td>
         <td> {{item.senderPhone}} </td>
-        <td> {{item.message}} </td>
+        <td style="max-width: 400px; min-width: 350px;"> {{item.message}} </td>
         <td>
           <button class="btn btn-danger btn-sm pl-1" (click)="deleteMail(item.id)">Del</button>
         </td>

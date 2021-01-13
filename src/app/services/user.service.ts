@@ -55,15 +55,8 @@ export class UserService {
 
   sendMessage(inbox) {
     this.http.post(this.path + 'inbox/add', inbox).subscribe(data => {      
-      this.alertifyService.success("Mesajınızı Başarıyla Gönderdiniz");      
-      // this.reloadPage();
+      this.alertifyService.success("Mesajınızı Başarıyla Gönderdiniz");            
     })
-  }
-
-  reloadPage() {
-    setTimeout(() => {
-      window.location.reload();
-    },200)
   }
 
   getJuniorPlayers():Observable<Player[]> {
@@ -97,7 +90,6 @@ export class UserService {
   getNationalPlayers():Observable<Player[]> {
     return this.http.get<Player[]>(this.path + "team/8");
   }
-
-
+  
 }
 
