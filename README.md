@@ -5,7 +5,7 @@ My aim was to make a new website for my friend who is coaching in "Genç Ankaral
 ## Technologies That I Used
 Angular /  .Net Core / Jwt / emailJs / AlertifyJs / Bootstrap
 
-## Quick Preview
+# Quick Preview
 
 ## Main page
 ![](media/mainPage.png)
