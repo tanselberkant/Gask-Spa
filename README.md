@@ -7,18 +7,18 @@ Angular /  .Net Core / Jwt / emailJs / AlertifyJs / Bootstrap
 
 ## Quick Preview
 
-### Main page
+## Main page
 ![](media/mainPage.png)
 
-### Listing Players (On hover effect I tried to show full name, stick side and position)
-![](media/listingPlayers.png)
+## Listing Players (On hover effect I tried to show full name, stick side and position)
+![](media/listingPlayers.jpg)
 
-### Listing Achievements
-![](media/achievementsPage.png)
+## Listing Achievements
+![](media/achievementsPage.jpg)
 
-### Quick AdminPanel Preview
+## Quick AdminPanel Preview
 ![](media/adminPanelListingPlayers.png)
 
-### Login Screen for Admin
+## Login Screen for Admin
 ![](media/loginScreen.png)
 
